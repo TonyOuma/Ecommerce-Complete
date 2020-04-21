@@ -9,7 +9,7 @@ class ProductProvider extends Component {
   state = {
     products: [],
     detailProduct: detailProduct,
-    cart: [],
+    cart: storeProducts,
 
     modalOpen: false,
     modalProduct: detailProduct,
@@ -73,6 +73,7 @@ class ProductProvider extends Component {
   };
 
   increment = (id) => {
+<<<<<<< HEAD
     let tempCart = [...this.state.cart];
     const selectedProduct = tempCart.find((item) => item.id === id);
     const index = tempCart.indexOf(selectedProduct);
@@ -165,6 +166,18 @@ class ProductProvider extends Component {
         cartTotal: total,
       };
     });
+=======
+    console.log("this is increment method");
+  };
+  decrement = (id) => {
+    console.log("this is decrement method");
+  };
+  removeItem = (id) => {
+    console.log("item removed");
+  };
+  clearCart = () => {
+    console.log("cart was cleared");
+>>>>>>> a72ae1e8c9a5fb4a2edf6f35f249548f2656a260
   };
 
   render() {
